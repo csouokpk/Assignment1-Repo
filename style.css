@@ -23,6 +23,24 @@ h2,h4,hr{
     margin-right: 50px;
 }
 
+button{
+    border: none;
+    background-color: transparent !important;
+    margin-top: 10px;
+    margin-left:10px;
+    margin-right:10px;
+    vertical-align: middle;
+    align-items: center;
+    padding: 10px;
+}
+
+ul li{
+    list-style: none;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+
 #container{
     width: 90%;
     height: 400px;
