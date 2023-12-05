@@ -22,11 +22,33 @@
 
     <!-- Tool Bar -->
     <div class="toolkit bg-dark">
-        
+        <ul>
+            <div class="btn-group" role="group" aria-label="Text Editing Tools">
+                
+
+
+                <li><button type="button" class="btn btn-secondary" onclick="colorPickeropen()" title="Font Color"><img src="Resources/font-color.png" width="22px"></button>
+                <input type="color" id="fontColorPicker" style="position: absolute; top: 100%; left: 0; opacity: 0;" oninput="changeColor(event)"></li>
+                
+            </div>
+        </ul>
 
     </div>
 
     <div id="container" contenteditable="true"></div>
+
+    <script>
+        function colorPickeropen() {
+            const colorPicker = document.getElementById('fontColorPicker');
+            colorPicker.click();
+        }
+    
+        function changeColor(event) {
+            const colorPicker = event.target;
+            const selectedColor = colorPicker.value;
+            document.execCommand('foreColor', true, selectedColor);
+        }
+    </script>
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
